@@ -1,0 +1,6 @@
+[submodule "ThirdParty/CYCoroutine"]
+	path = ThirdParty/CYCoroutine
+	url = https://github.com/maxhaosl/CYCoroutine.git
+[submodule "ThirdParty/CYLogger"]
+	path = ThirdParty/CYLogger
+	url = https://github.com/maxhaosl/CYLogger.git
