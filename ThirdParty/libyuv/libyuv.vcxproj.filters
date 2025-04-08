@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\libyuv">
+      <UniqueIdentifier>{c59d7f07-2ef6-4d0e-b5e3-570b9be168d1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\compare.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\compare_common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\compare_gcc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\compare_mmi.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\compare_msa.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\compare_neon.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\compare_neon64.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\compare_win.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\convert.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\convert_argb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\convert_from.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\convert_from_argb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\convert_jpeg.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\convert_to_argb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\convert_to_i420.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\cpu_id.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mjpeg_decoder.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mjpeg_validate.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\planar_functions.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate_any.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate_argb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate_common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate_gcc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate_mmi.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate_msa.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate_neon.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate_neon64.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rotate_win.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\row_any.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\row_common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\row_gcc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\row_mmi.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\row_msa.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\row_neon.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\row_neon64.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\row_win.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_any.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_argb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_gcc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_mmi.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_msa.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_neon.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_neon64.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_uv.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scale_win.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\video_common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\libyuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\basic_types.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\compare.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\compare_row.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\convert.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\convert_argb.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\convert_from.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\convert_from_argb.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\cpu_id.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\macros_msa.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\mjpeg_decoder.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\planar_functions.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\rotate.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\rotate_argb.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\rotate_row.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\row.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\scale.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\scale_argb.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\scale_row.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\scale_uv.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\version.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libyuv\video_common.h">
+      <Filter>头文件\libyuv</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

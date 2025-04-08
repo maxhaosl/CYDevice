@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Inc">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Inc\CYDevice">
+      <UniqueIdentifier>{f42b53ba-5ae6-4ebb-8837-5821dc8de073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Common">
+      <UniqueIdentifier>{6f6dca81-2c62-45be-987a-baec5da4106f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Common\Win">
+      <UniqueIdentifier>{598c0df1-6a08-4fab-baf2-72db73b56b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Common\Win\CaptureFilter">
+      <UniqueIdentifier>{313a6061-2bcd-4a02-8f3d-e77e2bab6d8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Capture">
+      <UniqueIdentifier>{40ed606e-602b-42b3-a29d-2f57afa799e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Capture\Win">
+      <UniqueIdentifier>{acb34558-353e-4845-b602-3cc5a3261216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Control">
+      <UniqueIdentifier>{300bfd04-5d1e-47fe-bff3-cdd6880dff10}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Inc\CYDevice\CYDeviceDefine.hpp">
+      <Filter>Inc\CYDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\CYDevice\CYDeviceFatory.hpp">
+      <Filter>Inc\CYDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\CYDevice\CYDeviceHelper.hpp">
+      <Filter>Inc\CYDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\CYDevice\ICYDevice.hpp">
+      <Filter>Inc\CYDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Capture\Win\DShowCommonDefine.hpp">
+      <Filter>Src\Capture\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Capture\Win\ReSampleRateDefine.hpp">
+      <Filter>Src\Capture\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Capture\Win\WinDeviceCaptrue.hpp">
+      <Filter>Src\Capture\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Capture\IDeviceCapture.hpp">
+      <Filter>Src\Capture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Common\Win\CaptureFilter\CaptureFilter.h">
+      <Filter>Src\Common\Win\CaptureFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Common\Win\IDeviceSource.h">
+      <Filter>Src\Common\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Common\Win\IVideoCaptureFilter.h">
+      <Filter>Src\Common\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Common\CYDevicePrivDefine.hpp">
+      <Filter>Src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Common\CYStringHelper.hpp">
+      <Filter>Src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Control\CYDeviceControl.hpp">
+      <Filter>Src\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\CYDeviceImpl.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Src\Capture\Win\WinDeviceCaptrue.cpp">
+      <Filter>Src\Capture\Win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Common\Win\CaptureFilter\CaptureFilter.cpp">
+      <Filter>Src\Common\Win\CaptureFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Common\CYStringHelper.cpp">
+      <Filter>Src\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Control\CYDeviceControl.cpp">
+      <Filter>Src\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\CYDeviceFactory.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\CYDeviceHelper.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\CYDeviceImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+CYDevice V1.0.0 features:
+1.DirectShow-based audio and video acquisition
+
+Included plugins:
+1. libyuv.
+2. CYCoroutine.
+3. CYLogger.
+
+2025-4-8：
+1. The first version is released, only supports Windows platform.
