@@ -1,4 +1,4 @@
-#include "Src/CYDeviceImpl.hpp"
+#include "CYDeviceImpl.hpp"
 #include "Control/CYDeviceControl.hpp"
 #include "Common/CYDevicePrivDefine.hpp"
 

@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CYLogger", "..\..\ThirdPart
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CYCoroutine", "..\..\ThirdParty\CYCoroutine\Build\Windows\CYCoroutine.vcxproj", "{8CEB26E4-5EDD-4466-8089-E7AF9CFDA215}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsamplerate", "..\..\ThirdParty\libsamplerate\libsamplerate.vcxproj", "{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -53,6 +55,14 @@ Global
 		{8CEB26E4-5EDD-4466-8089-E7AF9CFDA215}.Release|x64.Build.0 = Release|x64
 		{8CEB26E4-5EDD-4466-8089-E7AF9CFDA215}.Release|x86.ActiveCfg = Release|Win32
 		{8CEB26E4-5EDD-4466-8089-E7AF9CFDA215}.Release|x86.Build.0 = Release|Win32
+		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Debug|x64.ActiveCfg = Debug|x64
+		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Debug|x64.Build.0 = Debug|x64
+		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Debug|x86.ActiveCfg = Debug|Win32
+		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Debug|x86.Build.0 = Debug|Win32
+		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Release|x64.ActiveCfg = Release|x64
+		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Release|x64.Build.0 = Release|x64
+		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Release|x86.ActiveCfg = Release|Win32
+		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +71,7 @@ Global
 		{48AA65D0-C825-4B3B-9270-EA92ADF1FB6E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{4D5CA559-4C2C-414D-9716-E68F9B600CED} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{8CEB26E4-5EDD-4466-8089-E7AF9CFDA215} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA4FE655-DF1A-4E18-B6A3-04D14A05B742}

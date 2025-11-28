@@ -1,0 +1,27 @@
+﻿cl : 命令行  warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  src_zoh.c
+  src_sinc.c
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(473,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(474,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(625,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(626,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(627,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(628,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(783,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(784,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(785,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(786,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(787,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(788,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(1009,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(1012,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(1015,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(1018,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(1021,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(1024,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(1027,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+W:\Work\CYDevice\ThirdParty\libsamplerate\src_sinc.c(1030,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  src_linear.c
+  samplerate.c
+  正在生成代码...
+  libsamplerate.vcxproj -> W:\Work\CYDevice\Bin\x64\Debug\libsamplerateD.lib
