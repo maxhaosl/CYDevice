@@ -15,6 +15,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CYCoroutine", "..\..\ThirdP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsamplerate", "..\..\ThirdParty\libsamplerate\libsamplerate.vcxproj", "{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{CD270B24-F188-40A4-B08B-B1A62A80A263}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CYDeviceTest", "..\..\Samples\CYDeviceTest\CYDeviceTest.vcxproj", "{63A4047B-D10C-8922-DA7A-197BE331C8D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -63,6 +67,14 @@ Global
 		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Release|x64.Build.0 = Release|x64
 		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Release|x86.ActiveCfg = Release|Win32
 		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F}.Release|x86.Build.0 = Release|Win32
+		{63A4047B-D10C-8922-DA7A-197BE331C8D7}.Debug|x64.ActiveCfg = Debug|x64
+		{63A4047B-D10C-8922-DA7A-197BE331C8D7}.Debug|x64.Build.0 = Debug|x64
+		{63A4047B-D10C-8922-DA7A-197BE331C8D7}.Debug|x86.ActiveCfg = Debug|Win32
+		{63A4047B-D10C-8922-DA7A-197BE331C8D7}.Debug|x86.Build.0 = Debug|Win32
+		{63A4047B-D10C-8922-DA7A-197BE331C8D7}.Release|x64.ActiveCfg = Release|x64
+		{63A4047B-D10C-8922-DA7A-197BE331C8D7}.Release|x64.Build.0 = Release|x64
+		{63A4047B-D10C-8922-DA7A-197BE331C8D7}.Release|x86.ActiveCfg = Release|Win32
+		{63A4047B-D10C-8922-DA7A-197BE331C8D7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +84,7 @@ Global
 		{4D5CA559-4C2C-414D-9716-E68F9B600CED} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{8CEB26E4-5EDD-4466-8089-E7AF9CFDA215} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{47AFDBEF-F15F-4BC0-B436-5BE443C3F80F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{63A4047B-D10C-8922-DA7A-197BE331C8D7} = {CD270B24-F188-40A4-B08B-B1A62A80A263}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA4FE655-DF1A-4E18-B6A3-04D14A05B742}

@@ -1,0 +1,9 @@
+﻿  CVideoRender.cpp
+  CYDeviceTest.cpp
+  CYDeviceTestDlg.cpp
+W:\Work\CYDevice\Samples\CYDeviceTest\CYDeviceTestDlg.cpp(138,33): warning C4018: “<”: 有符号/无符号不匹配
+W:\Work\CYDevice\Samples\CYDeviceTest\CYDeviceTestDlg.cpp(145,33): warning C4018: “<”: 有符号/无符号不匹配
+  GDIPlusRender.cpp
+  正在生成代码...
+    正在创建库 W:\Work\CYDevice\Build\Windows\\..\..\Bin\x64\Debug\CYDeviceTest.lib 和对象 W:\Work\CYDevice\Build\Windows\\..\..\Bin\x64\Debug\CYDeviceTest.exp
+  CYDeviceTest.vcxproj -> W:\Work\CYDevice\Bin\x64\Debug\CYDeviceTest.exe

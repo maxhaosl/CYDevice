@@ -1,13 +1,47 @@
 #include "Common/Win/CaptureFilter/CaptureFilter.h"
 #include "Common/Win/IDeviceSource.h"
 #include "Common/Win/IVideoCaptureFilter.h"
+#include "Common/CYDevicePrivDefine.hpp"
 
 #include <dshow.h>
 #include <Amaudio.h>
 #include <Dvdmedia.h>
 
-void WINAPI FreeMediaType(AM_MEDIA_TYPE& mt);
-HRESULT WINAPI CopyMediaType(AM_MEDIA_TYPE* pmtTarget, const AM_MEDIA_TYPE* pmtSource);
+HRESULT WINAPI CopyMediaType(AM_MEDIA_TYPE* pmtTarget, const AM_MEDIA_TYPE* pmtSource)
+{
+    if (!pmtSource || !pmtTarget) return S_FALSE;
+
+    *pmtTarget = *pmtSource;
+
+    if (pmtSource->cbFormat && pmtSource->pbFormat)
+    {
+        pmtTarget->pbFormat = (PBYTE)CoTaskMemAlloc(pmtSource->cbFormat);
+        if (pmtTarget->pbFormat == NULL)
+        {
+            pmtTarget->cbFormat = 0;
+            return E_OUTOFMEMORY;
+        }
+        else
+            memcpy(pmtTarget->pbFormat, pmtSource->pbFormat, pmtTarget->cbFormat);
+    }
+
+    if (pmtTarget->pUnk != NULL)
+        pmtTarget->pUnk->AddRef();
+
+    return S_OK;
+}
+
+void FreeMediaType(AM_MEDIA_TYPE& mt)
+{
+    if (mt.cbFormat != 0)
+    {
+        CoTaskMemFree((LPVOID)mt.pbFormat);
+        mt.cbFormat = 0;
+        mt.pbFormat = NULL;
+    }
+
+    SafeRelease(mt.pUnk);
+}
 
 inline BITMAPINFOHEADER* GetVideoBMIHeader(const AM_MEDIA_TYPE* pMT)
 {

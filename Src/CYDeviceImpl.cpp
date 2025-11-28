@@ -2,15 +2,27 @@
 #include "Control/CYDeviceControl.hpp"
 #include "Common/CYDevicePrivDefine.hpp"
 
+#if defined(_WIN32) || defined(_WIN64)
+#include <objbase.h>
+#endif
+
 CYDEVICE_NAMESPACE_BEGIN
 
 CYDeviceImpl::CYDeviceImpl()
     : ICYDevice()
 {
+#if defined(_WIN32) || defined(_WIN64)
+    // Initialize COM library
+    CoInitializeEx(nullptr, COINIT_MULTITHREADED);
+#endif
 }
 
 CYDeviceImpl::~CYDeviceImpl()
 {
+#if defined(_WIN32) || defined(_WIN64)
+    // Uninitialize COM library
+    CoUninitialize();
+#endif
 }
 
 int16_t CYDeviceImpl::Init(int nWidth/* = 1024*/, int nHeight/* = 768*/, int nFPS/* = 25*/, const wchar_t* pszDeviceName, const wchar_t* pszDeviceId, int nSampleRateHz, const wchar_t* pszAudioName, const wchar_t* pszAudioID, bool bUseRender/* = true*/)

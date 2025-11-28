@@ -151,7 +151,7 @@ int16_t CWinDeviceCaptrue::Init(int nWidth, int nHeight, int nFPS, const wchar_t
     IAMStreamConfig* pStreamConfig = nullptr; SafeReleasePtr<IAMStreamConfig> ptrStreamConfig;
     IMediaControl* pControl = nullptr;
 
-    IPin* pDevicePin = nullptr, *pAudioPin = nullptr;
+    IPin* pDevicePin = nullptr, * pAudioPin = nullptr;
     SafeReleasePtr<IPin> ptrDevicePin, ptrAudioPin;
 
     bool bForceCustomAudio = false;
@@ -732,6 +732,7 @@ int16_t CWinDeviceCaptrue::Start(ICYAudioDataCallBack* pAudioDataCallBack, ICYVi
     m_pAudioDataCallBack = pAudioDataCallBack;
     m_pVideoDataCallBack = pVideoDataCallBack;
 
+    m_bCapturing = true;
     if (m_pAudioDataCallBack)
     {
         m_audioThread = std::thread(&CWinDeviceCaptrue::OnAudioEntry, this);
@@ -742,7 +743,6 @@ int16_t CWinDeviceCaptrue::Start(ICYAudioDataCallBack* pAudioDataCallBack, ICYVi
         m_videoThread = std::thread(&CWinDeviceCaptrue::OnVideoEntry, this);
     }
 
-    m_bCapturing = true;
     return CYERR_SUCESS;
 }
 
@@ -778,8 +778,9 @@ int16_t CWinDeviceCaptrue::GetNextAudioBuffer(float** bufferOut, uint32_t* numFr
     {
         {
             std::unique_lock<std::mutex> m_locker(m_audioMutex);
+            std::vector<BYTE>* plstBuffer = m_ptrSampleBuffer.get();
 
-            memcpy(&outputBuffer[0], &m_ptrSampleBuffer.get()[0], sampleSegmentSize);
+            memcpy(outputBuffer.data(), plstBuffer->data(), sampleSegmentSize);
             m_ptrSampleBuffer->erase(m_ptrSampleBuffer->begin(), m_ptrSampleBuffer->begin() + sampleSegmentSize);
         }
 
@@ -1288,8 +1289,10 @@ void CWinDeviceCaptrue::OnAudioEntry()
 {
     while (m_bCapturing)
     {
-        UniqueLock locker(m_audioMutex);
-        m_audioCV.wait_for(locker, std::chrono::milliseconds(10), [this]() { return m_ptrSampleBuffer->size() >= sampleSegmentSize; });
+        {
+            UniqueLock locker(m_audioMutex);
+            m_audioCV.wait_for(locker, std::chrono::milliseconds(10), [this]() { return m_ptrSampleBuffer->size() >= sampleSegmentSize; });
+        }
 
         if (!m_bCapturing) break;
 
@@ -1400,7 +1403,6 @@ void CWinDeviceCaptrue::OnVideoEntry()
             const int32_t width = lastSample->cx;
             const int32_t height = lastSample->cy;
 
-            
             // Not encoded, convert to I420.
             if (m_eColorType != TYPE_VIDEO_OUTPUT_MJPG &&
                 CalcBufferSize(m_eColorType, width, abs(height)) !=

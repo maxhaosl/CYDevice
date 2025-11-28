@@ -1,7 +1,7 @@
 #include "Control/CYDeviceControl.hpp"
 #include "Common/CYDevicePrivDefine.hpp"
 
-#ifdef WIN32
+#ifdef _WIN32
 #include "Capture/Win/WinDeviceCaptrue.hpp"
 #endif
 
@@ -19,7 +19,7 @@ int16_t CYDeviceControl::Init(int nWidth/* = 1024*/, int nHeight/* = 768*/, int 
 {
     EXCEPTION_BEGIN
     {
-#ifdef WIN32
+#ifdef _WIN32
         m_ptrDeviceCapture = MakeUnique<CWinDeviceCaptrue>();
 #else
 

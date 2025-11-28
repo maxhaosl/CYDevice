@@ -14,6 +14,20 @@
 
 CYDEVICE_NAMESPACE_BEGIN
 
+class CYDeviceHelper
+{
+public:
+    CYDeviceHelper()
+    {
+        CoInitialize(NULL);
+    }
+
+    ~CYDeviceHelper()
+    {
+        CoUninitialize();
+    }
+};
+
 #define SafeRelease(var) if(var) {var->Release(); var = NULL;}
 
 std::string WStringToString(const std::wstring& wstr)
@@ -33,6 +47,7 @@ std::string WStringToString(const std::wstring& wstr)
 
 int16_t GetDeviceList(ECYDeviceType eType, TDeviceInfo* pInfo, uint32_t* pCount)
 {
+    CYDeviceHelper objHelper;
     CComPtr<ICreateDevEnum> ptrDeviceEnum;
     CComPtr<IEnumMoniker> ptrVideoDeviceEnum;
 
@@ -99,22 +114,26 @@ int16_t GetDeviceList(ECYDeviceType eType, TDeviceInfo* pInfo, uint32_t* pCount)
                 {
                     if (pInfo)
                     {
+                        USES_CONVERSION;
                         std::wstring strDeviceNameW = (WCHAR*)friendlyNameValue.bstrVal;
-                        std::string strDeviceName = WStringToString(strDeviceNameW);
+                        std::string strDeviceName = W2A(strDeviceNameW.c_str()); //WStringToString(strDeviceNameW);
                         strcpy_s(pInfo[*pCount].szDeviceName, strDeviceName.c_str());
 
                         if (devicePathValue.bstrVal)
                         {
                             std::wstring strDeviceIDW = (WCHAR*)devicePathValue.bstrVal;
-                            std::string strDeviceID = WStringToString(strDeviceIDW);
+                            std::string strDeviceID = W2A(strDeviceIDW.c_str());//WStringToString(strDeviceIDW);
                             strcpy_s(pInfo[*pCount].szDeviceId, strDeviceID.c_str());
                         }
                         SafeRelease(filter);
                     }
-                    *pCount++;
+                    (*pCount)++;
                 }
             }
         }
+
+        ptrDeviceInfo = nullptr;
+        dwCount = 0;
     }
     return CYERR_SUCESS;
 }

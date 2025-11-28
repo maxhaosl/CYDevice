@@ -80,13 +80,13 @@ enum ECYVideoType
 
 enum ECYErrorCode
 {
-    CYERR_SUCESS                        = 0x00,         // 返回成功
-    CYERR_FAILED                        = 0x01,         // 返回失败
-    CYERR_CREATE_GRAPH_FAILED           = 0x02,         // 创建Graph失败
-    CYERR_CREATE_GRAPHBUILDER_FAILED    = 0x03,         // 创建GraphBuilder2失败
-    CYERR_REPEAT_START_CAPTURE          = 0x04,         // 重复打开采集
-    CYEER_NOT_START_CAPTURE             = 0x05,         // 当前没有开启采集
-    CYERR_CAPTURE_RUN_FAILED            = 0x06,         // Capture Run Failed.
+    CYERR_SUCESS = 0x00,         // 返回成功
+    CYERR_FAILED = 0x01,         // 返回失败
+    CYERR_CREATE_GRAPH_FAILED = 0x02,         // 创建Graph失败
+    CYERR_CREATE_GRAPHBUILDER_FAILED = 0x03,         // 创建GraphBuilder2失败
+    CYERR_REPEAT_START_CAPTURE = 0x04,         // 重复打开采集
+    CYEER_NOT_START_CAPTURE = 0x05,         // 当前没有开启采集
+    CYERR_CAPTURE_RUN_FAILED = 0x06,         // Capture Run Failed.
 };
 
 //////////////////////////////////////////////////////////////////////////
@@ -99,8 +99,8 @@ struct TDeviceInfo
 class CYDEVICE_API ICYAudioDataCallBack
 {
 public:
-    ICYAudioDataCallBack(){ }
-    virtual ~ICYAudioDataCallBack(){ }
+    ICYAudioDataCallBack() {}
+    virtual ~ICYAudioDataCallBack() {}
 
 public:
     virtual void OnAudioData(float* pBuffer, uint32_t nNumberAudioFrames, uint32_t nChannel, uint64_t nTimeStamps) = 0;
@@ -109,8 +109,8 @@ public:
 class CYDEVICE_API ICYVideoDataCallBack
 {
 public:
-    ICYVideoDataCallBack(){ }
-    virtual ~ICYVideoDataCallBack(){ }
+    ICYVideoDataCallBack() {}
+    virtual ~ICYVideoDataCallBack() {}
 
 public:
     virtual void OnVideoData(const unsigned char* pData, int nLen, int nWidth, int nHeight, unsigned long long nTimeStampls) = 0;
