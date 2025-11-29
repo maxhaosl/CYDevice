@@ -2,6 +2,8 @@
 
 [English](README.md) | [中文](README_zh.md)
 
+![CYDeviceTest](CYDeviceTest.png)
+
 CYDevice is a cross-platform audio and video collection library designed for capturing audio and video data from system devices. It provides a unified API for device enumeration, initialization, and data capture across multiple platforms.
 
 ## Features
