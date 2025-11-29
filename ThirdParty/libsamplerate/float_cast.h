@@ -152,36 +152,53 @@
 	#undef		HAVE_LRINT_REPLACEMENT
 	#define		HAVE_LRINT_REPLACEMENT	1
 
-	#include	<math.h>
-
 	/*
 	**	Win32 doesn't seem to have these functions.
 	**	Therefore implement inline versions of these functions here.
+	**	
+	**	Note: In newer MSVC versions, lrint and lrintf may be defined
+	**	as intrinsic functions. We use pragma to disable intrinsics.
 	*/
 
-	__inline long int
-	lrint (double flt)
-	{	int intgr ;
+	#include	<math.h>
 
-		_asm
-		{	fld flt
-			fistp intgr
-			} ;
+	/* For MSVC 2015+, disable intrinsic functions and use macros */
+	#if defined(_MSC_VER) && _MSC_VER >= 1900
+		/* Disable intrinsic functions - this tells MSVC to treat these as regular functions */
+		#pragma intrinsic(lrint, off)
+		#pragma intrinsic(lrintf, off)
+		
+		/* Use macros instead of function definitions to avoid conflicts */
+		#undef lrint
+		#undef lrintf
+		#define lrint(flt) ((long)(flt))
+		#define lrintf(flt) ((long)(flt))
+	#else
+		/* For older MSVC, use inline assembly */
+		__inline long int
+		lrint (double flt)
+		{	int intgr ;
 
-		return intgr ;
-	}
+			_asm
+			{	fld flt
+				fistp intgr
+				} ;
 
-	__inline long int
-	lrintf (float flt)
-	{	int intgr ;
+			return intgr ;
+		}
 
-		_asm
-		{	fld flt
-			fistp intgr
-			} ;
+		__inline long int
+		lrintf (float flt)
+		{	int intgr ;
 
-		return intgr ;
-	}
+			_asm
+			{	fld flt
+				fistp intgr
+				} ;
+
+			return intgr ;
+		}
+	#endif
 
 #elif (defined (__MWERKS__) && defined (macintosh))
 

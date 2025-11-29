@@ -1,10 +1,20 @@
 CYDevice V1.0.0 features:
-1.DirectShow-based audio and video acquisition
+1. DirectShow-based audio and video acquisition
+2. CMake build system support for all platforms
+3. Cross-platform build scripts (Windows, Linux, macOS, iOS, Android)
+4. Device enumeration and management
+5. Real-time audio and video capture with callback interface
 
 Included plugins:
-1. libyuv.
-2. CYCoroutine.
-3. CYLogger.
+1. libyuv - Video format conversion library
+2. CYCoroutine - C++20 coroutine library
+3. CYLogger - Cross-platform logging library
+4. libsamplerate - Audio resampling library
 
 2025-4-8：
 1. The first version is released, only supports Windows platform.
+2. Added CMake build system with support for multiple platforms
+3. Added build scripts for Windows (batch), Linux, macOS, iOS, and Android (shell)
+4. Windows build supports x86/x64, MD/MT runtime libraries, Debug/Release configurations
+5. Output directory structure: Bin/{Platform}/{Arch}/{Runtime}/{Config}/
+6. Moved CMakeLists.txt to project root for better CMake integration
