@@ -77,20 +77,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)\..\..\Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\..\..\Bin\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)\..\..\Bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)\..\..\Bin\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\..\..\Bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)\..\..\Bin\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\..\..\Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\..\..\Bin\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -105,7 +107,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CYDeviceD.lib;CYCoroutineD.lib;CYLoggerD.lib;libyuvd.lib;strmiids.lib;ole32.lib;oleaut32.lib;libsamplerateD.lib</AdditionalDependencies>
+      <AdditionalDependencies>CYCommonD.lib;CYCoroutineD.lib;CYLoggerD.lib;CYDeviceD.lib;libyuvd.lib;strmiids.lib;ole32.lib;oleaut32.lib;libsamplerateD.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -131,7 +133,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CYDeviceD.lib;CYCoroutineD.lib;CYLoggerD.lib;libyuvd.lib;strmiids.lib;ole32.lib;oleaut32.lib;libsamplerateD.lib</AdditionalDependencies>
+      <AdditionalDependencies>CYCommonD.lib;CYCoroutineD.lib;CYLoggerD.lib;CYDeviceD.lib;libyuvd.lib;strmiids.lib;ole32.lib;oleaut32.lib;libsamplerateD.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -161,7 +163,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CYDevice.lib;CYCoroutine.lib;CYLogger.lib;libyuv.lib;strmiids.lib;ole32.lib;oleaut32.lib;libsamplerate.lib</AdditionalDependencies>
+      <AdditionalDependencies>CYCommon.lib;CYCoroutine.lib;CYLogger.lib;CYDevice.lib;libyuv.lib;strmiids.lib;ole32.lib;oleaut32.lib;libsamplerate.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -191,7 +193,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CYDevice.lib;CYCoroutine.lib;CYLogger.lib;libyuv.lib;strmiids.lib;ole32.lib;oleaut32.lib;libsamplerate.lib</AdditionalDependencies>
+      <AdditionalDependencies>CYCommon.lib;CYCoroutine.lib;CYLogger.lib;CYDevice.lib;libyuv.lib;strmiids.lib;ole32.lib;oleaut32.lib;libsamplerate.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>

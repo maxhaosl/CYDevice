@@ -98,21 +98,21 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\..\..\Bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)\..\..\Bin\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)\..\..\Bin\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)\..\..\Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\..\..\Bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)\..\..\Bin\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\..\..\Bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)\..\..\Bin\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -122,7 +122,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>./;$(ProjectDir)\..\..\Inc;$(ProjectDir)\..\..\Src;$(ProjectDir)\..\..\ThirdParty;$(ProjectDir)\..\..\ThirdParty\CYCoroutine;$(ProjectDir)\..\..\ThirdParty\CYCoroutine\Inc;$(ProjectDir)\..\..\ThirdParty\CYLogger;$(ProjectDir)\..\..\ThirdParty\CYLogger\Inc;$(ProjectDir)\..\..\ThirdParty\libyuv;$(ProjectDir)\..\..\ThirdParty\libyuv\include;$(ProjectDir)\..\..\ThirdParty\libsamplerate</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;$(ProjectDir)\..\..\Inc;$(ProjectDir)\..\..\Src;$(ProjectDir)\..\..\ThirdParty;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCoroutine;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCoroutine\Inc;$(ProjectDir)\..\..\ThirdParty\CYLogger;$(ProjectDir)\..\..\ThirdParty\CYLogger\Inc;$(ProjectDir)\..\..\ThirdParty\libyuv;$(ProjectDir)\..\..\ThirdParty\libyuv\include;$(ProjectDir)\..\..\ThirdParty\libsamplerate;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCommon;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCommon\Inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -147,7 +147,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>./;$(ProjectDir)\..\..\Inc;$(ProjectDir)\..\..\Src;$(ProjectDir)\..\..\ThirdParty;$(ProjectDir)\..\..\ThirdParty\CYCoroutine;$(ProjectDir)\..\..\ThirdParty\CYCoroutine\Inc;$(ProjectDir)\..\..\ThirdParty\CYLogger;$(ProjectDir)\..\..\ThirdParty\CYLogger\Inc;$(ProjectDir)\..\..\ThirdParty\libyuv;$(ProjectDir)\..\..\ThirdParty\libyuv\include;$(ProjectDir)\..\..\ThirdParty\libsamplerate</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;$(ProjectDir)\..\..\Inc;$(ProjectDir)\..\..\Src;$(ProjectDir)\..\..\ThirdParty;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCoroutine;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCoroutine\Inc;$(ProjectDir)\..\..\ThirdParty\CYLogger;$(ProjectDir)\..\..\ThirdParty\CYLogger\Inc;$(ProjectDir)\..\..\ThirdParty\libyuv;$(ProjectDir)\..\..\ThirdParty\libyuv\include;$(ProjectDir)\..\..\ThirdParty\libsamplerate;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCommon;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCommon\Inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
@@ -170,7 +170,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>./;$(ProjectDir)\..\..\Inc;$(ProjectDir)\..\..\Src;$(ProjectDir)\..\..\ThirdParty;$(ProjectDir)\..\..\ThirdParty\CYCoroutine;$(ProjectDir)\..\..\ThirdParty\CYCoroutine\Inc;$(ProjectDir)\..\..\ThirdParty\CYLogger;$(ProjectDir)\..\..\ThirdParty\CYLogger\Inc;$(ProjectDir)\..\..\ThirdParty\libyuv;$(ProjectDir)\..\..\ThirdParty\libyuv\include;$(ProjectDir)\..\..\ThirdParty\libsamplerate</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;$(ProjectDir)\..\..\Inc;$(ProjectDir)\..\..\Src;$(ProjectDir)\..\..\ThirdParty;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCoroutine;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCoroutine\Inc;$(ProjectDir)\..\..\ThirdParty\CYLogger;$(ProjectDir)\..\..\ThirdParty\CYLogger\Inc;$(ProjectDir)\..\..\ThirdParty\libyuv;$(ProjectDir)\..\..\ThirdParty\libyuv\include;$(ProjectDir)\..\..\ThirdParty\libsamplerate;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCommon;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCommon\Inc</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -193,7 +193,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>./;$(ProjectDir)\..\..\Inc;$(ProjectDir)\..\..\Src;$(ProjectDir)\..\..\ThirdParty;$(ProjectDir)\..\..\ThirdParty\CYCoroutine;$(ProjectDir)\..\..\ThirdParty\CYCoroutine\Inc;$(ProjectDir)\..\..\ThirdParty\CYLogger;$(ProjectDir)\..\..\ThirdParty\CYLogger\Inc;$(ProjectDir)\..\..\ThirdParty\libyuv;$(ProjectDir)\..\..\ThirdParty\libyuv\include;$(ProjectDir)\..\..\ThirdParty\libsamplerate</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;$(ProjectDir)\..\..\Inc;$(ProjectDir)\..\..\Src;$(ProjectDir)\..\..\ThirdParty;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCoroutine;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCoroutine\Inc;$(ProjectDir)\..\..\ThirdParty\CYLogger;$(ProjectDir)\..\..\ThirdParty\CYLogger\Inc;$(ProjectDir)\..\..\ThirdParty\libyuv;$(ProjectDir)\..\..\ThirdParty\libyuv\include;$(ProjectDir)\..\..\ThirdParty\libsamplerate;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCommon;$(ProjectDir)\..\..\ThirdParty\CYLogger\ThirdParty\CYCommon\Inc</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>

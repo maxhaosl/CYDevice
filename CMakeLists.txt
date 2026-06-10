@@ -40,8 +40,10 @@ set(INCLUDE_DIRS
     ${PROJECT_ROOT}/Inc
     ${PROJECT_ROOT}/Src
     ${PROJECT_ROOT}/ThirdParty
-    ${PROJECT_ROOT}/ThirdParty/CYCoroutine
-    ${PROJECT_ROOT}/ThirdParty/CYCoroutine/Inc
+    ${PROJECT_ROOT}/ThirdParty/CYLogger/ThirdParty/CYCoroutine
+    ${PROJECT_ROOT}/ThirdParty/CYLogger/ThirdParty/CYCoroutine/Inc
+    ${PROJECT_ROOT}/ThirdParty/CYLogger/ThirdParty/CYCommon
+    ${PROJECT_ROOT}/ThirdParty/CYLogger/ThirdParty/CYCommon/Inc
     ${PROJECT_ROOT}/ThirdParty/CYLogger
     ${PROJECT_ROOT}/ThirdParty/CYLogger/Inc
     ${PROJECT_ROOT}/ThirdParty/libyuv

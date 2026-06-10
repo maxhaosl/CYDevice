@@ -3,8 +3,8 @@
 
 #include "CYDevice/CYDeviceDefine.hpp"
 #include "Inc/ICYLoggerDefine.hpp"
-#include "CYCoroutine/CYTypeDefine.hpp"
-#include "CYCoroutine/Common/Exception/CYException.hpp"
+#include "CYCommon/CYTypeDefine.hpp"
+#include "CYCommon/Common/Exception/CYException.hpp"
 #include "Inc/ICYLogger.hpp"
 
 CYDEVICE_NAMESPACE_BEGIN
@@ -84,10 +84,10 @@ constexpr float g_fAttn4dotX = 1.0f / (1.0f + g_fSurroundMix4);
 
 CYDEVICE_NAMESPACE_END
 
-#define ExceptionLog(e)		CY_LOG_ERROR(CYCOROUTINE_NAMESPACE::AtoT(e))
+#define ExceptionLog(e)		CY_LOG_ERROR(CYCOMMON_NAMESPACE::AtoT(e))
 
-#define EXCEPTION_BEGIN 	UniquePtr<CYCOROUTINE_NAMESPACE::CYBaseException> excp;  try 
-#define EXCEPTION_END		catch (CYCOROUTINE_NAMESPACE::CYBaseException* e) {	excp.reset(e); ExceptionLog(excp->what()); } \
+#define EXCEPTION_BEGIN 	UniquePtr<CYCOMMON_NAMESPACE::CYBaseException> excp;  try 
+#define EXCEPTION_END		catch (CYCOMMON_NAMESPACE::CYBaseException* e) {	excp.reset(e); ExceptionLog(excp->what()); } \
 							catch (...) { ExceptionLog("Unknown exception!"); }
 
 
